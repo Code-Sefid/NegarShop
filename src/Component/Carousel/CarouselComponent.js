@@ -23,17 +23,17 @@ function CarouselComponent() {
   };
 
   return (
-    <div className="max-w-[1000px] h-[300px] w-full px-4 relative group ml-[7rem] mt-[3rem]">
+    <div className="max-w-[1170px] h-[300px] w-full px-4 relative">
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className="w-full h-full rounded-[2.5rem] bg-center bg-cover duration-500"
       ></div>
       {/* Left Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-slate-200 opacity-[40%] ml-5 text-white cursor-pointer">
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-slate-200 opacity-[40%] ml-5 hover:opacity-[80%] duration-500 text-white cursor-pointer">
         <GrFormPrevious onClick={prevSlide} size={30} />
       </div>
       {/* Right Arrow */}
-      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-slate-200 opacity-[40%] mr-5 text-white cursor-pointer">
+      <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-2 bg-slate-200 opacity-[40%] mr-5 hover:opacity-[80%] duration-500 text-white cursor-pointer">
         <GrFormNext onClick={nextSlide} size={30} />
       </div>
       <div className="flex -mt-8 justify-center py-2">

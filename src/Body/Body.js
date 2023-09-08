@@ -2,13 +2,14 @@ import React from "react";
 import Header from "../Component/Header";
 // import Footer from "../Component/Footer";
 import CarouselComponent from "../Component/Carousel";
-import { CarouselData } from "../Component/Carousel/CarouselData";
 
 export default function Body() {
   return (
-    <div className="bg-slate-200/40 h-[100vh]">
+    <div className="bg-slate-200/40 h-full">
       <Header />
-      <CarouselComponent  />
+      <div className="flex justify-center mt-[2rem]">
+        <CarouselComponent />
+      </div>
       {/* <Footer /> */}
     </div>
   );

@@ -1,7 +1,11 @@
 import Body from "./Body/Body";
 
 function App() {
-  return <Body />;
+  return (
+    <div>
+      <Body />
+    </div>
+  );
 }
 
 export default App;
