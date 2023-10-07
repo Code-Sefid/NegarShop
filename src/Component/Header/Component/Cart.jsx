@@ -1,8 +1,9 @@
-import React from "react";
+import { useContext } from "react";
 import { FaShoppingCart } from "react-icons/fa";
-import {Link} from 're'
+import { HeaderContext } from "../../../Context/HeaderContext";
 
 export default function Cart() {
+  const { open, setOpen } = useContext(HeaderContext);
   return (
     <div className="relative mr-4 inline-flex w-fit">
       <div
@@ -13,16 +14,17 @@ export default function Cart() {
       >
         0
       </div>
-      <Link
+      <a
+        onClick={() => setOpen(!open)}
         href="#"
-        className="flex items-center z-0
-        xl:px-6 xl:py-3 lg:px-5 lg:py-2 md:px-4 md:py-2 bg-black/80 text-white hover:bg-blue-500 rounded-full"
+        className="flex items-center justify-center z-0 px-4 py-2 bg-black/80 text-white hover:bg-blue-500 rounded-full"
       >
         سبد خرید{" "}
         <span className="ml-2">
           <FaShoppingCart />
         </span>
-      </Link>
+      </a>
+      {/* side */}
     </div>
   );
 }
